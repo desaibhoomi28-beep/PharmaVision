@@ -1,0 +1,845 @@
+/* =====================================
+   EXPIRY MANAGEMENT PAGE
+===================================== */
+
+.expiryPage {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7fcff 0%,
+      #f2faff 50%,
+      #f8fcff 100%
+    );
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.expiryHeader {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+.expiryHeading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.expiryHeadingIcon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  color: #0789ca;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4f7ff,
+      #d8f1fb
+    );
+
+  font-size: 22px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(7, 137, 202, 0.12);
+}
+
+
+.expiryHeading h1 {
+  margin: 0;
+
+  color: #183f58;
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+.expiryHeading p {
+  margin: 6px 0 0;
+
+  color: #849aa8;
+
+  font-size: 13px;
+}
+
+
+/* =====================================
+   REFRESH BUTTON
+===================================== */
+
+.expiryRefreshBtn {
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #18a6df,
+      #0789ca
+    );
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(7, 137, 202, 0.18);
+
+  transition: all 0.25s ease;
+}
+
+
+.expiryRefreshBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 26px
+    rgba(7, 137, 202, 0.25);
+}
+
+
+.expiryRefreshBtn:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================
+   STATISTICS GRID
+===================================== */
+
+.expiryStats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+
+.expiryStatCard {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: white;
+
+  border:
+    1px solid #e4eef3;
+
+  box-shadow:
+    0 8px 24px
+    rgba(30, 90, 120, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.expiryStatCard::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  right: -45px;
+  top: -45px;
+
+  opacity: 0.35;
+}
+
+
+.expiryStatCard:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(30, 90, 120, 0.10);
+}
+
+
+/* =====================================
+   STAT ICON
+===================================== */
+
+.expiryStatIcon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+}
+
+
+/* EXPIRED */
+
+.expiryStatCard.expired
+.expiryStatIcon {
+  color: #e45757;
+
+  background: #fff0f0;
+}
+
+.expiryStatCard.expired::after {
+  background: #ffe2e2;
+}
+
+
+/* EXPIRING SOON */
+
+.expiryStatCard.soon
+.expiryStatIcon {
+  color: #e39719;
+
+  background: #fff6df;
+}
+
+.expiryStatCard.soon::after {
+  background: #fff0ca;
+}
+
+
+/* UPCOMING */
+
+.expiryStatCard.warning
+.expiryStatIcon {
+  color: #0789ca;
+
+  background: #e7f6fd;
+}
+
+.expiryStatCard.warning::after {
+  background: #d8f0fb;
+}
+
+
+/* SAFE */
+
+.expiryStatCard.safe
+.expiryStatIcon {
+  color: #27a76f;
+
+  background: #e9f9f1;
+}
+
+.expiryStatCard.safe::after {
+  background: #d9f5e7;
+}
+
+
+/* =====================================
+   STAT TEXT
+===================================== */
+
+.expiryStatCard span {
+  display: block;
+
+  color: #8499a6;
+
+  font-size: 11px;
+
+  margin-bottom: 4px;
+}
+
+
+.expiryStatCard strong {
+  display: block;
+
+  color: #183f58;
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+
+.expiryStatCard small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9aacb5;
+
+  font-size: 9px;
+}
+
+
+/* =====================================
+   TABLE CONTAINER
+===================================== */
+
+.expiryTableContainer {
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: white;
+
+  border:
+    1px solid #e4eef3;
+
+  box-shadow:
+    0 10px 30px
+    rgba(30, 90, 120, 0.06);
+}
+
+
+/* =====================================
+   TABLE TOP
+===================================== */
+
+.expiryTableTop {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 24px;
+}
+
+
+.expiryTableTop h2 {
+  margin: 0;
+
+  color: #183f58;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+
+.expiryTableTop p {
+  margin: 6px 0 0;
+
+  color: #8a9da8;
+
+  font-size: 12px;
+}
+
+
+/* =====================================
+   FILTERS
+===================================== */
+
+.expiryFilters {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.expirySearch {
+  width: 220px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid #dcebf2;
+
+  border-radius: 11px;
+
+  background: #f9fdff;
+
+  transition: all 0.2s ease;
+}
+
+
+.expirySearch:focus-within {
+  border-color: #55b6dd;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(55, 171, 219, 0.08);
+}
+
+
+.expirySearch svg {
+  color: #6faec9;
+
+  font-size: 13px;
+}
+
+
+.expirySearch input {
+  flex: 1;
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #31566a;
+
+  font-size: 11px;
+}
+
+
+.expirySearch input::placeholder {
+  color: #a5b6bf;
+}
+
+
+.expiryFilters select {
+  height: 42px;
+
+  padding: 0 13px;
+
+  border:
+    1px solid #dcebf2;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #f9fdff;
+
+  color: #607d8d;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.expiryFilters select:focus {
+  border-color: #55b6dd;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(55, 171, 219, 0.08);
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.expiryTableWrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border-radius: 13px;
+
+  border:
+    1px solid #edf2f5;
+}
+
+
+.expiryTable {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 750px;
+}
+
+
+.expiryTable thead {
+  background: #f7fbfd;
+}
+
+
+.expiryTable th {
+  padding: 15px;
+
+  text-align: left;
+
+  color: #67818f;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  border-bottom:
+    1px solid #e8f0f4;
+}
+
+
+.expiryTable td {
+  padding: 17px 15px;
+
+  color: #718894;
+
+  font-size: 12px;
+
+  border-bottom:
+    1px solid #edf2f5;
+}
+
+
+.expiryTable tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+.expiryTable tbody tr:hover {
+  background: #f8fcfe;
+}
+
+
+.expiryTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.expiryTable td strong {
+  color: #294b60;
+
+  font-size: 12px;
+}
+
+
+/* =====================================
+   DAYS REMAINING
+===================================== */
+
+.daysRemaining {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.daysRemaining.expired {
+  color: #d64646;
+
+  background: #fff0f0;
+}
+
+
+.daysRemaining.soon {
+  color: #d18a10;
+
+  background: #fff5dc;
+}
+
+
+.daysRemaining.warning {
+  color: #087fb9;
+
+  background: #e8f6fd;
+}
+
+
+.daysRemaining.safe {
+  color: #258b60;
+
+  background: #eaf9f1;
+}
+
+
+/* =====================================
+   STATUS BADGES
+===================================== */
+
+.expiryStatus {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.expiryStatus.expired {
+  color: #d64646;
+
+  background: #ffe6e6;
+}
+
+
+.expiryStatus.soon {
+  color: #c9800e;
+
+  background: #fff0cf;
+}
+
+
+.expiryStatus.warning {
+  color: #087fb9;
+
+  background: #e4f5fd;
+}
+
+
+.expiryStatus.safe {
+  color: #258b60;
+
+  background: #e6f8ee;
+}
+
+
+/* =====================================
+   LOADING
+===================================== */
+
+.expiryLoading {
+  padding: 60px;
+
+  text-align: center;
+
+  color: #849aa7;
+
+  font-size: 13px;
+}
+
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.expiryEmpty {
+  padding: 65px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.expiryEmpty svg {
+  width: 60px;
+  height: 60px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  color: #27a76f;
+
+  background: #e9f9f1;
+
+  margin-bottom: 15px;
+}
+
+
+.expiryEmpty h3 {
+  margin: 0;
+
+  color: #294b60;
+
+  font-size: 16px;
+}
+
+
+.expiryEmpty p {
+  margin: 7px 0 0;
+
+  color: #8a9faa;
+
+  font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1200px) {
+
+  .expiryStats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .expiryPage {
+    padding: 22px;
+  }
+
+
+  .expiryHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .expiryTableTop {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .expiryFilters {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .expiryPage {
+    padding: 16px;
+  }
+
+
+  .expiryStats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .expiryTableContainer {
+    padding: 17px;
+  }
+
+
+  .expiryHeading h1 {
+    font-size: 22px;
+  }
+
+
+  .expiryHeading p {
+    font-size: 11px;
+  }
+
+
+  .expirySearch {
+    width: 100%;
+  }
+
+
+  .expiryFilters {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .expiryFilters select {
+    width: 100%;
+  }
+
+}

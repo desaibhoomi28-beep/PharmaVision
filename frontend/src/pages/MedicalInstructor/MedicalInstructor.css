@@ -1,0 +1,858 @@
+.medicalInstructorPage {
+  min-height: 100vh;
+  padding: 30px 34px 50px;
+  background: #f6f9fc;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.medicalInstructorHeader {
+  margin-bottom: 26px;
+}
+
+.medicalInstructorTitle {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.medicalInstructorIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #dff3ff,
+    #eaf8ff
+  );
+
+  color: #1688c9;
+  font-size: 28px;
+}
+
+.medicalEyebrow {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #1688c9;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.medicalInstructorTitle h1 {
+  margin: 0;
+
+  color: #172b4d;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.medicalInstructorTitle p {
+  margin: 7px 0 0;
+
+  color: #718096;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.medicalSearchBox {
+  display: flex;
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4edf5;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 22px rgba(
+      33,
+      76,
+      110,
+      0.06
+    );
+
+  margin-bottom: 25px;
+}
+
+.medicalSearchInput {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e1e9f0;
+
+  border-radius: 11px;
+
+  background: #f9fbfd;
+}
+
+.medicalSearchInput svg {
+  color: #8aa1b5;
+}
+
+.medicalSearchInput input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 13px 0;
+
+  color: #243b53;
+
+  font-size: 14px;
+}
+
+.medicalSearchBox button {
+  border: none;
+
+  padding: 0 26px;
+
+  border-radius: 11px;
+
+  background: #1688c9;
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.medicalSearchBox button:hover {
+  background: #0878b7;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.medicalError {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  padding: 14px 16px;
+
+  background: #fff3f3;
+
+  border: 1px solid #ffd6d6;
+
+  border-radius: 12px;
+
+  color: #c53030;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.medicineKnowledgeSection {
+  margin-top: 10px;
+}
+
+.medicineSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 18px;
+}
+
+.medicineSectionHeader span:first-child {
+  color: #1688c9;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.medicineSectionHeader h2 {
+  margin: 5px 0 0;
+
+  color: #172b4d;
+
+  font-size: 22px;
+}
+
+.medicineCount {
+  padding: 8px 13px;
+
+  background: #e8f6ff;
+
+  color: #1688c9;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   MEDICINE CARDS
+   ============================================================ */
+
+.medicineCards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(260px, 1fr)
+    );
+
+  gap: 15px;
+}
+
+.medicineKnowledgeCard {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border: 1px solid #e3edf5;
+
+  border-radius: 15px;
+
+  background: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.medicineKnowledgeCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #9ed8f5;
+
+  box-shadow:
+    0 10px 25px rgba(
+      33,
+      90,
+      130,
+      0.09
+    );
+}
+
+.medicineCardIcon {
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eaf7ff;
+
+  color: #1688c9;
+
+  font-size: 20px;
+}
+
+.medicineCardContent {
+  flex: 1;
+}
+
+.medicineCardContent h3 {
+  margin: 0;
+
+  color: #213547;
+
+  font-size: 15px;
+}
+
+.medicineCardContent p {
+  margin: 5px 0 0;
+
+  color: #8a9bad;
+
+  font-size: 12px;
+}
+
+.viewArrow {
+  color: #1688c9;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.medicalDetails {
+  margin-top: 5px;
+}
+
+.backMedicineBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 9px 13px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #1688c9;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.medicineHeroCard {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 28px;
+
+  margin-bottom: 20px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eff9ff
+    );
+
+  border: 1px solid #dceef8;
+}
+
+.medicineHeroIcon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #dff3ff;
+
+  color: #1688c9;
+
+  font-size: 31px;
+}
+
+.medicineHeroCard span {
+  color: #1688c9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.medicineHeroCard h2 {
+  margin: 5px 0;
+
+  color: #172b4d;
+
+  font-size: 28px;
+}
+
+.medicineHeroCard p {
+  margin: 0;
+
+  color: #70859a;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   INFORMATION CARDS
+   ============================================================ */
+
+.medicalInfoGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.medicalInfoCard {
+  display: flex;
+
+  gap: 16px;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  background: white;
+
+  border: 1px solid #e3edf5;
+
+  box-shadow:
+    0 5px 20px rgba(
+      33,
+      76,
+      110,
+      0.04
+    );
+}
+
+.medicalInfoCard.warning {
+  background: #fffdf8;
+
+  border-color: #f5e6c6;
+}
+
+.infoCardIcon {
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e9f7ff;
+
+  color: #1688c9;
+}
+
+.medicalInfoCard.warning
+.infoCardIcon {
+  background: #fff1d7;
+
+  color: #d89000;
+}
+
+.medicalInfoCard h3 {
+  margin: 0 0 9px;
+
+  color: #263b53;
+
+  font-size: 15px;
+}
+
+.medicalInfoCard ul {
+  margin: 0;
+
+  padding-left: 18px;
+
+  color: #667b8e;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.medicalInfoCard p {
+  margin: 0;
+
+  color: #8b9aaa;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   STATISTICS
+   ============================================================ */
+
+.medicalStats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.medicalStatCard {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 19px;
+
+  background: white;
+
+  border: 1px solid #e4edf4;
+
+  border-radius: 15px;
+}
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #edf8ff;
+
+  color: #1688c9;
+}
+
+.medicalStatCard span {
+  display: block;
+
+  color: #8798a8;
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+}
+
+.medicalStatCard strong {
+  color: #20364d;
+
+  font-size: 19px;
+}
+
+
+/* ============================================================
+   USAGE
+   ============================================================ */
+
+.medicalUsageCard {
+  padding: 24px;
+
+  margin-bottom: 20px;
+
+  background: white;
+
+  border: 1px solid #e3edf5;
+
+  border-radius: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+.sectionTitle > div:first-child {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eaf7ff;
+
+  color: #1688c9;
+}
+
+.sectionTitle h3 {
+  margin: 0;
+
+  color: #243b53;
+
+  font-size: 17px;
+}
+
+.sectionTitle p {
+  margin: 4px 0 0;
+
+  color: #8999a8;
+
+  font-size: 12px;
+}
+
+.usageGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.usageGrid > div {
+  padding: 16px;
+
+  background: #f7fafc;
+
+  border-radius: 12px;
+}
+
+.usageGrid span {
+  display: block;
+
+  color: #8293a4;
+
+  font-size: 11px;
+
+  margin-bottom: 7px;
+}
+
+.usageGrid strong {
+  color: #263b53;
+
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   SOURCE
+   ============================================================ */
+
+.medicalSourceCard {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 17px;
+
+  background: #edf8ff;
+
+  border: 1px solid #d5effd;
+
+  border-radius: 14px;
+
+  color: #1688c9;
+}
+
+.medicalSourceCard > svg {
+  margin-top: 2px;
+}
+
+.medicalSourceCard strong {
+  display: block;
+
+  color: #24506c;
+
+  font-size: 13px;
+
+  margin-bottom: 4px;
+}
+
+.medicalSourceCard p {
+  margin: 0;
+
+  color: #617f92;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   LOADING / EMPTY
+   ============================================================ */
+
+.medicalLoading {
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6f8294;
+
+  font-size: 14px;
+}
+
+.medicalEmpty {
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: white;
+
+  border: 1px solid #e3edf5;
+
+  border-radius: 16px;
+
+  color: #8395a6;
+}
+
+.medicalEmpty svg {
+  font-size: 35px;
+
+  margin-bottom: 12px;
+
+  color: #acd9ef;
+}
+
+.medicalEmpty h3 {
+  margin: 0;
+
+  color: #42566b;
+
+  font-size: 17px;
+}
+
+.medicalEmpty p {
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .medicalStats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .usageGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .medicalInfoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicineCards {
+    grid-template-columns: 1fr;
+  }
+
+  .medicalInstructorPage {
+    padding: 22px 18px 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .medicalInstructorTitle {
+    align-items: flex-start;
+  }
+
+  .medicalInstructorIcon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+
+  .medicalInstructorTitle h1 {
+    font-size: 24px;
+  }
+
+  .medicalSearchBox {
+    flex-direction: column;
+  }
+
+  .medicalSearchBox button {
+    padding: 13px;
+  }
+
+  .medicalStats {
+    grid-template-columns: 1fr;
+  }
+
+  .usageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicineHeroCard {
+    padding: 20px;
+  }
+
+  .medicineHeroCard h2 {
+    font-size: 22px;
+  }
+}

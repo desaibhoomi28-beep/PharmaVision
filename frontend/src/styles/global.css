@@ -1,0 +1,371 @@
+@import url("theme.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+body {
+  margin: 0;
+
+  background:
+    #f5fbff;
+
+  color:
+    var(--text);
+
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+
+  min-height: 100vh;
+
+  background:
+    #f5fbff;
+}
+
+.main {
+  flex: 1;
+
+  min-width: 0;
+
+  min-height: 100vh;
+}
+
+.dashboard {
+  padding: 30px;
+}
+
+/* =====================================================
+   AUTH
+===================================================== */
+
+.authPage {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef9ff,
+      #f8fcff
+    );
+}
+
+.authCard {
+  width: 100%;
+
+  max-width: 470px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 38px;
+
+  box-shadow:
+    0 20px 60px
+      rgba(15, 23, 42, 0.1);
+
+  border:
+    1px solid #e0f2fe;
+}
+
+.registerCard {
+  max-width: 520px;
+
+  max-height: 94vh;
+
+  overflow-y: auto;
+}
+
+.authLogo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 30px;
+}
+
+.authLogoIcon {
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4da8da,
+      #74c0fc
+    );
+
+  color: white;
+
+  font-size: 22px;
+}
+
+.authLogo h1 {
+  margin: 0;
+
+  font-size: 23px;
+
+  color: #0f172a;
+}
+
+.authLogo p {
+  margin-top: 3px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.authHeader {
+  margin-bottom: 22px;
+}
+
+.authHeader h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #0f172a;
+}
+
+.authHeader p {
+  margin-top: 7px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.authError {
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  background:
+    #fee2e2;
+
+  color:
+    #991b1b;
+
+  margin-bottom: 18px;
+
+  font-size: 13px;
+}
+
+.authCard form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.authCard label {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-top: 8px;
+}
+
+.inputBox {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid #cbd5e1;
+
+  border-radius: 11px;
+
+  background: white;
+}
+
+.inputBox:focus-within {
+  border-color:
+    #4da8da;
+
+  box-shadow:
+    0 0 0 3px
+      rgba(77, 168, 218, 0.1);
+}
+
+.inputBox svg {
+  color:
+    #4da8da;
+}
+
+.inputBox input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.authButton {
+  height: 48px;
+
+  margin-top: 17px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4da8da,
+      #74c0fc
+    );
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 8px 20px
+      rgba(77, 168, 218, 0.25);
+}
+
+.authButton:disabled {
+  opacity: 0.65;
+
+  cursor:
+    not-allowed;
+}
+
+.authSwitch {
+  text-align: center;
+
+  color:
+    #64748b;
+
+  font-size: 13px;
+
+  margin-top: 22px;
+}
+
+.authSwitch a {
+  color:
+    #2563eb;
+
+  font-weight: 700;
+}
+
+.roleSelector {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.roleButton {
+  padding: 13px;
+
+  border-radius: 11px;
+
+  background:
+    #f1f5f9;
+
+  color:
+    #475569;
+
+  font-weight: 700;
+
+  border:
+    1px solid #e2e8f0;
+}
+
+.activeRole {
+  background:
+    #eaf7fd;
+
+  border-color:
+    #4da8da;
+
+  color:
+    #2563eb;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 230px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  .authCard {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,441 @@
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+  width: 100%;
+
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 15px 30px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e6eef3;
+}
+
+
+/* =====================================
+   LEFT
+===================================== */
+
+.left {
+  min-width: 190px;
+}
+
+
+.left h1 {
+  margin: 0;
+
+  color: #183f58;
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.left p {
+  margin: 5px 0 0;
+
+  color: #8297a5;
+
+  font-size: 12px;
+}
+
+
+/* =====================================
+   MIDDLE SEARCH
+===================================== */
+
+.middle {
+  width: 300px;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dce9f0;
+
+  border-radius: 11px;
+
+  background: #f8fcfe;
+
+  transition: 0.2s ease;
+}
+
+
+.middle:focus-within {
+  border-color: #168dcc;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(22, 141, 204, 0.08);
+}
+
+
+.searchIcon {
+  color: #6fa9c1;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
+}
+
+
+.middle input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #31566a;
+
+  font-size: 12px;
+}
+
+
+.middle input::placeholder {
+  color: #9db0ba;
+}
+
+
+/* =====================================
+   RIGHT SIDE
+===================================== */
+
+.right {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 16px;
+
+  margin-left: auto;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================
+   NOTIFICATION
+===================================== */
+
+.notification {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f3f9fc;
+
+  color: #54707f;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.notification:hover {
+  background: #e5f5fc;
+
+  color: #0789ca;
+}
+
+
+.notification span {
+  position: absolute;
+
+  top: -6px;
+  right: -6px;
+
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #df5b5b;
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  border: 2px solid white;
+}
+
+
+/* =====================================
+   DATE
+===================================== */
+
+.date {
+  padding: 8px 12px;
+
+  border-radius: 9px;
+
+  background: #f5fafc;
+
+  color: #617b89;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.navLoginBtn {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 65px;
+
+  height: 36px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #b9dfed;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #087fbd;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+
+.navLoginBtn:hover {
+  background: #effaff;
+
+  border-color: #0789ca;
+}
+
+
+/* =====================================
+   REGISTER
+===================================== */
+
+.navRegisterBtn {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 75px;
+
+  height: 36px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #18a6df,
+      #0789ca
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 7px 15px
+    rgba(7, 137, 202, 0.18);
+
+  transition: 0.2s ease;
+}
+
+
+.navRegisterBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px
+    rgba(7, 137, 202, 0.25);
+}
+
+
+/* =====================================
+   PROFILE
+===================================== */
+
+.profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding-left: 8px;
+}
+
+
+.profileIcon {
+  color: #4d6b7a;
+
+  font-size: 30px;
+}
+
+
+.profile h4 {
+  margin: 0;
+
+  color: #294b60;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.profile small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #90a3ad;
+
+  font-size: 9px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1150px) {
+
+  .navbar {
+    gap: 15px;
+
+    padding: 15px 20px;
+  }
+
+
+  .middle {
+    width: 220px;
+  }
+
+
+  .date {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-wrap: wrap;
+
+    min-height: auto;
+  }
+
+
+  .middle {
+    order: 3;
+
+    width: 100%;
+  }
+
+
+  .right {
+    margin-left: auto;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 15px;
+  }
+
+
+  .left h1 {
+    font-size: 23px;
+  }
+
+
+  .navLoginBtn,
+  .navRegisterBtn {
+    display: none;
+  }
+
+
+  .profile div {
+    display: none;
+  }
+
+
+  .right {
+    gap: 10px;
+  }
+
+}

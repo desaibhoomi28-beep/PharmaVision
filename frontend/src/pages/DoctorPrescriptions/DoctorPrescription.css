@@ -1,0 +1,457 @@
+.prescriptionPage {
+  min-height: 100vh;
+  padding: 30px 34px 50px;
+  background: #f7f9fc;
+  color: #172033;
+  font-family: Inter, sans-serif;
+}
+
+.prescriptionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.prescriptionTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prescriptionIcon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#635bff,#8178ff);
+  color: white;
+  font-size: 24px;
+}
+
+.prescriptionTitle span,
+.cardTop span,
+.pharmacistPrescriptionHeader > div:first-child > span {
+  color: #6257e8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.prescriptionTitle h1 {
+  margin: 4px 0;
+  font-size: 29px;
+}
+
+.prescriptionTitle p {
+  margin: 0;
+  color: #7b8798;
+  font-size: 12px;
+}
+
+.roleBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border-radius: 20px;
+  background: #f0edff;
+  color: #6257e8;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.doctorPrescriptionGrid {
+  display: grid;
+  grid-template-columns: 1.35fr .8fr;
+  gap: 20px;
+}
+
+.prescriptionFormCard,
+.prescriptionHistory,
+.pharmacistPrescriptionPage {
+  padding: 23px;
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(20,30,50,.04);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cardTop h2 {
+  margin: 5px 0 0;
+  font-size: 19px;
+}
+
+.cardTop > svg {
+  color: #9ca5b4;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 12px;
+}
+
+.prescriptionField {
+  margin-bottom: 15px;
+}
+
+.prescriptionField label,
+.medicinePrescriptionRow label {
+  display: block;
+  margin-bottom: 6px;
+  color: #475467;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.prescriptionField input,
+.prescriptionField select,
+.prescriptionField textarea,
+.medicinePrescriptionRow input,
+.medicinePrescriptionRow select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce2e9;
+  border-radius: 9px;
+  outline: none;
+  background: white;
+  color: #344054;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.prescriptionField input,
+.prescriptionField select,
+.medicinePrescriptionRow input,
+.medicinePrescriptionRow select {
+  height: 41px;
+  padding: 0 10px;
+}
+
+.prescriptionField textarea {
+  padding: 10px;
+  resize: vertical;
+}
+
+.prescriptionField input:focus,
+.prescriptionField select:focus,
+.prescriptionField textarea:focus,
+.medicinePrescriptionRow input:focus,
+.medicinePrescriptionRow select:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99,91,255,.08);
+}
+
+.medicineRowsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+.medicineRowsHeader h3 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.medicineRowsHeader button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: #f0edff;
+  color: #6257e8;
+  font-size: 9px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.medicineRows {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.medicinePrescriptionRow {
+  display: grid;
+  grid-template-columns: 2fr .65fr .9fr .65fr .65fr 30px;
+  align-items: end;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #e8ecf2;
+  border-radius: 11px;
+  background: #fafbfc;
+}
+
+.calculatedQuantity {
+  text-align: center;
+}
+
+.calculatedQuantity span {
+  display: block;
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+.calculatedQuantity strong {
+  display: block;
+  margin-top: 7px;
+  color: #6257e8;
+  font-size: 14px;
+}
+
+.deleteMedicine {
+  width: 30px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.sendPrescription {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg,#635bff,#776eff);
+  color: white;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.prescriptionHistoryItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.rxNumber {
+  color: #6257e8;
+  font-family: monospace;
+  font-size: 8px;
+}
+
+.rxInfo {
+  flex: 1;
+}
+
+.rxInfo strong,
+.rxInfo span {
+  display: block;
+}
+
+.rxInfo strong {
+  font-size: 10px;
+}
+
+.rxInfo span {
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+.rxStatus {
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.rxStatus.pending {
+  background: #fff4df;
+  color: #b45309;
+}
+
+.rxStatus.dispensed {
+  background: #e8faef;
+  color: #15803d;
+}
+
+.pharmacistPrescriptionPage {
+  padding: 25px;
+}
+
+.pharmacistPrescriptionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pharmacistPrescriptionHeader h2 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.pharmacistPrescriptionHeader p {
+  margin: 0;
+  color: #8792a5;
+  font-size: 11px;
+}
+
+.pendingBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-radius: 20px;
+  background: #fff4df;
+  color: #b45309;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.pharmacistRxList {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
+
+.pharmacistRxCard {
+  padding: 17px;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+}
+
+.rxCardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patientAvatar {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #eeecff;
+  color: #6257e8;
+  font-weight: 800;
+}
+
+.rxCardTop > div:nth-child(2) {
+  flex: 1;
+}
+
+.rxCardTop strong,
+.rxCardTop span {
+  display: block;
+}
+
+.rxCardTop strong {
+  font-size: 11px;
+}
+
+.rxCardTop span {
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+.rxMedicine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 17px 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8f9fc;
+}
+
+.rxMedicine > svg {
+  color: #6257e8;
+}
+
+.rxMedicine strong,
+.rxMedicine span {
+  display: block;
+}
+
+.rxMedicine strong {
+  font-size: 10px;
+}
+
+.rxMedicine span {
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+.rxCardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.rxCardActions button {
+  flex: 1;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.checkStock {
+  border: 1px solid #dce2e9;
+  background: white;
+  color: #667085;
+}
+
+.dispenseRx {
+  border: 0;
+  background: #635bff;
+  color: white;
+}
+
+@media(max-width:1000px) {
+  .doctorPrescriptionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicinePrescriptionRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pharmacistRxList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:650px) {
+  .prescriptionPage {
+    padding: 20px 14px;
+  }
+
+  .prescriptionHeader,
+  .pharmacistPrescriptionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

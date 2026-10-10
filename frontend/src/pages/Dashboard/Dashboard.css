@@ -1,0 +1,660 @@
+.dashboardPage {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f5f9fc;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboardHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.dashboardEyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #1594cf;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboardHeader h1 {
+  margin: 0;
+  color: #183f58;
+  font-size: 32px;
+}
+
+.dashboardHeader p {
+  margin: 8px 0 0;
+  color: #7893a3;
+  font-size: 14px;
+}
+
+.dashboardHeaderActions {
+  display: flex;
+  gap: 12px;
+}
+
+.refreshDashboardBtn,
+.viewMedicinesBtn {
+  height: 44px;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.refreshDashboardBtn {
+  border: 1px solid #d7e8f0;
+  background: white;
+  color: #4f7183;
+}
+
+.viewMedicinesBtn {
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #18a6df,
+    #0789ca
+  );
+  color: white;
+  box-shadow: 0 8px 18px rgba(7, 137, 202, 0.18);
+}
+
+
+/* =========================
+   HEALTH BANNER
+========================= */
+
+.healthBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #e9f8ff,
+    #f9fdff
+  );
+  border: 1px solid #cdebf7;
+}
+
+.healthLeft {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.healthIcon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #1594cf;
+  color: white;
+  font-size: 23px;
+}
+
+.healthLeft span {
+  color: #1594cf;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.healthLeft h2 {
+  margin: 6px 0;
+  color: #24495f;
+  font-size: 21px;
+}
+
+.healthLeft p {
+  margin: 0;
+  color: #7893a3;
+  font-size: 12px;
+}
+
+.healthScore {
+  min-width: 110px;
+  text-align: center;
+}
+
+.healthScore strong {
+  color: #0789ca;
+  font-size: 34px;
+}
+
+.healthScore span {
+  color: #8ba3b0;
+  font-size: 12px;
+}
+
+
+/* =========================
+   MAIN STATS
+========================= */
+
+.dashboardStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.dashboardStatCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 0 7px 22px rgba(31, 78, 104, 0.05);
+  transition: 0.25s;
+}
+
+.dashboardStatCard:hover {
+  transform: translateY(-4px);
+  border-color: #d7edf7;
+}
+
+.statIconBox {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  font-size: 18px;
+}
+
+.blueStat .statIconBox {
+  background: #e7f7ff;
+  color: #1594cf;
+}
+
+.stockStat .statIconBox {
+  background: #eaf8ff;
+  color: #0789ca;
+}
+
+.warningStat .statIconBox {
+  background: #fff5e4;
+  color: #e5a124;
+}
+
+.dangerStat .statIconBox {
+  background: #fff0f0;
+  color: #dc6565;
+}
+
+.dashboardStatCard span {
+  display: block;
+  color: #8199a8;
+  font-size: 10px;
+}
+
+.dashboardStatCard h2 {
+  margin: 5px 0;
+  color: #24495f;
+  font-size: 24px;
+}
+
+.dashboardStatCard small {
+  color: #9aacb5;
+  font-size: 9px;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.dashboardCard {
+  padding: 24px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(31, 78, 104, 0.05);
+}
+
+.dashboardCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.dashboardCardHeader span {
+  color: #1594cf;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.dashboardCardHeader h2 {
+  margin: 6px 0 0;
+  color: #24495f;
+  font-size: 18px;
+}
+
+.usageTotal {
+  padding: 8px 10px;
+  border-radius: 9px;
+  background: #edf9ff;
+  color: #0789ca;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   USAGE CHART
+========================= */
+
+.usageChart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 13px;
+  border-bottom: 1px solid #e8f0f4;
+}
+
+.usageColumn {
+  flex: 1;
+  height: 100%;
+  min-width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.usageValue {
+  margin-bottom: 7px;
+  color: #527080;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.usageBarArea {
+  height: 185px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.usageBar {
+  width: 65%;
+  min-height: 5px;
+  border-radius: 8px 8px 2px 2px;
+  background: linear-gradient(
+    to top,
+    #0789ca,
+    #5cc4e9
+  );
+  transition: height 0.6s ease;
+}
+
+.usageColumn small {
+  margin-top: 9px;
+  color: #8da5b1;
+  font-size: 9px;
+}
+
+
+/* =========================
+   ALERTS
+========================= */
+
+.viewAllLink {
+  border: none;
+  background: transparent;
+  color: #1594cf;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alertsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alertItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 12px;
+  border-radius: 11px;
+}
+
+.alertItem.HIGH {
+  background: #fff4f4;
+}
+
+.alertItem.MEDIUM {
+  background: #fff9ed;
+}
+
+.alertDot {
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #e5a124;
+}
+
+.alertItem.HIGH .alertDot {
+  background: #dc6565;
+}
+
+.alertItem strong {
+  color: #31566a;
+  font-size: 11px;
+}
+
+.alertItem p {
+  margin: 4px 0 0;
+  color: #8199a8;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.noAlerts {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7f99a7;
+  text-align: center;
+}
+
+.noAlerts svg {
+  margin-bottom: 12px;
+  color: #1594cf;
+  font-size: 28px;
+}
+
+
+/* =========================
+   SECONDARY STATS
+========================= */
+
+.secondaryStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.secondaryStat {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 7px 20px rgba(31, 78, 104, 0.04);
+}
+
+.secondaryStat > div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #edf8fd;
+  color: #1594cf;
+}
+
+.secondaryStat span {
+  display: block;
+  color: #849aa7;
+  font-size: 9px;
+}
+
+.secondaryStat strong {
+  display: block;
+  margin-top: 4px;
+  color: #31566a;
+  font-size: 17px;
+}
+
+.liveStatus {
+  color: #1594cf !important;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.recentMedicinesCard {
+  margin-bottom: 20px;
+}
+
+.recentTableWrapper {
+  overflow-x: auto;
+}
+
+.recentMedicineTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recentMedicineTable th {
+  padding: 13px;
+  text-align: left;
+  color: #8299a7;
+  font-size: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #e8f0f4;
+}
+
+.recentMedicineTable td {
+  padding: 15px 13px;
+  color: #5d7888;
+  font-size: 11px;
+  border-bottom: 1px solid #f0f4f6;
+}
+
+.recentMedicineTable td strong {
+  color: #31566a;
+}
+
+.medicineStatus {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.medicineStatus.In {
+  background: #e9f8ff;
+  color: #0789ca;
+}
+
+.medicineStatus.Low {
+  background: #fff4df;
+  color: #d9961d;
+}
+
+.medicineStatus.Out {
+  background: #fff0f0;
+  color: #d95f5f;
+}
+
+.noData {
+  padding: 30px !important;
+  text-align: center;
+  color: #8ba0ab !important;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.dashboardLoading {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboardLoading svg {
+  margin-bottom: 15px;
+  color: #1594cf;
+  font-size: 32px;
+}
+
+.dashboardLoading h2 {
+  margin: 0 0 7px;
+  color: #24495f;
+}
+
+.dashboardLoading p {
+  color: #8199a8;
+  font-size: 12px;
+}
+
+.dashboardError {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  background: #fff3f3;
+  border: 1px solid #ffd8d8;
+  border-radius: 15px;
+  color: #c95359;
+}
+
+.dashboardError svg {
+  font-size: 25px;
+}
+
+.dashboardError h3 {
+  margin: 0 0 5px;
+}
+
+.dashboardError p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.dashboardError button {
+  margin-left: auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #1594cf;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+
+  .dashboardStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .secondaryStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .dashboardPage {
+    padding: 20px;
+  }
+
+  .dashboardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboardHeaderActions {
+    width: 100%;
+  }
+
+  .dashboardHeaderActions button {
+    flex: 1;
+  }
+
+  .healthBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .dashboardStats,
+  .secondaryStats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeader h1 {
+    font-size: 26px;
+  }
+
+}

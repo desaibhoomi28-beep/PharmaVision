@@ -1,0 +1,319 @@
+/* ===========================
+   Medicine Page
+=========================== */
+
+.medicinePage{
+    width:100%;
+    padding:25px;
+}
+
+.medicineTop{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.medicineTop h1{
+    color:#173b69;
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.medicineTop p{
+    color:#6d7d93;
+}
+
+.addMedicineBtn{
+    border:none;
+    background:linear-gradient(135deg,#49b6ff,#4fd1ff);
+    color:white;
+    padding:14px 26px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(52,160,255,.25);
+}
+
+.addMedicineBtn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* ===========================
+   Search Filters
+=========================== */
+
+.filterSection{
+
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+
+}
+
+.filterSection input{
+
+    flex:1;
+    min-width:250px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.filterSection select{
+
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    cursor:pointer;
+
+}
+
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+thead{
+
+    background:linear-gradient(135deg,#4eb8ff,#7edbff);
+    color:white;
+
+}
+
+thead th{
+
+    padding:18px;
+    text-align:left;
+    font-size:15px;
+
+}
+
+tbody td{
+
+    padding:18px;
+    border-bottom:1px solid #eef3fa;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#f4fbff;
+
+}
+
+
+/* ===========================
+   Status
+=========================== */
+
+.status{
+
+    padding:8px 15px;
+    border-radius:25px;
+    color:white;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.green{
+
+    background:#20c997;
+
+}
+
+.yellow{
+
+    background:#f7b731;
+
+}
+
+.red{
+
+    background:#ff5c5c;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.action{
+
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    margin-right:8px;
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+
+}
+
+.view{
+
+    background:#48b8ff;
+
+}
+
+.edit{
+
+    background:#2ecc71;
+
+}
+
+.delete{
+
+    background:#ff5c5c;
+
+}
+
+.action:hover{
+
+    transform:scale(1.12);
+
+}
+
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.medicineTop{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+.filterSection{
+
+flex-direction:column;
+
+}
+
+table{
+
+display:block;
+overflow-x:auto;
+
+}
+
+}
+
+/* =======================
+   Modal
+======================= */
+
+.modalOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.modal{
+
+    width:500px;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+.modal h2{
+
+    color:#1a365d;
+    margin-bottom:20px;
+
+}
+
+.modal form{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.modal input{
+
+    padding:14px;
+    border:1px solid #dce7f3;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+
+}
+
+.modal input:focus{
+
+    border-color:#4eb8ff;
+
+}
+
+.modalButtons{
+
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:10px;
+
+}
+
+.cancelBtn{
+
+    padding:12px 20px;
+    border:none;
+    background:#d6dde7;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+.saveBtn{
+
+    padding:12px 20px;
+    border:none;
+    background:linear-gradient(135deg,#4eb8ff,#74d8ff);
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+
+}
